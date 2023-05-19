@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Advancement Tacker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #595959; color: white;">
+    <!-- All of this is a placeholder -->
+    <h1>Minecraft Advancement Tracker (WIP)</h1>
+
+    <h2>How to use:</h2>
+    <div class="instructions">
+        <p>1.- Open the file explorer and go to your .minecraft folder, this will depend on your OS</p>
+        <table>
+            <tr>
+                <th>Windows</th>
+                <th>Linux</th>
+            </tr>
+            <tr>
+                <td>C:\Users\yourUser\AppData\Roaming\.minecraft</td>
+                <td>~/.minecraft</td>
+            </tr>
+        </table>
+
+        <p>2.- Go to your <span>saves</span> folder, open your world folder, then into <span>advancements</span></p>
+        <p>3.- Copy the path to your <span>advancements</span> folder, then click below to upload a file</p>
+        <p>4.- Paste the path into your file explorer, then upload the json file (it will have a weird name like d761008a-1d69-4a77-838d-2bbdc4c099f7)</p>
+        <p>5.- Press check for advancements and open the console for the results (right click anywhere, then inspect, then console)</p>
+
+    </div>
+
+    <div>
+        <input type="file" name="" id="fileInput" accept=".json">
+        <br>
+        <input onclick="checkAdvancements()" type="button" value="Check for advancements" id="submit">
+    </div>
+
+    <script src="magic.js"></script>
+</body>
+</html>
