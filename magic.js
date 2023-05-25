@@ -44,6 +44,14 @@ fetch("./1.19_nether.json")
         nether = data;
     });
 
+function capitalize(name){
+    let words = name.split("_");
+    words.forEach((element, index) => {
+        words[index] = element.charAt(0).toUpperCase() + element.slice(1);
+    });
+    return words.join(" ");
+}
+
 function handleUserFile(){
     const fileList = this.files[0];
     // console.log(uploadedFiles);
@@ -61,7 +69,7 @@ function checkAdvancements(){
         nether.forEach(element => {
             if(! (("minecraft:" + element) in userAdvancementFile["minecraft:nether/explore_nether"]["criteria"])){
                 // console.log(element + " not yet visited")
-                r_nether.push(element);
+                r_nether.push(capitalize(element));
             }
         });
     } else {
@@ -74,7 +82,7 @@ function checkAdvancements(){
         mobs.forEach(element => {
             if(! (("minecraft:" + element) in userAdvancementFile["minecraft:adventure/kill_all_mobs"]["criteria"])){
                 // console.log(element + " not yet killed")
-                r_mobs.push(element);
+                r_mobs.push(capitalize(element));
             }
         });
     } else {
@@ -87,7 +95,7 @@ function checkAdvancements(){
         foods.forEach(element => {
             if(! (element in userAdvancementFile["minecraft:husbandry/balanced_diet"]["criteria"])){
                 // console.log(element + " not yet eaten")
-                r_foods.push(element);
+                r_foods.push(capitalize(element));
             }
         });
     } else {
@@ -100,7 +108,7 @@ function checkAdvancements(){
         cats.forEach(element => {
             if(! (("minecraft:" + element) in userAdvancementFile["minecraft:husbandry/complete_catalogue"]["criteria"])){
                 // console.log(element + " not yet tamed")
-                r_cats.push(element);
+                r_cats.push(capitalize(element));
             }
         });
     } else {
@@ -113,7 +121,7 @@ function checkAdvancements(){
         biomes.forEach(element => {
             if(! (("minecraft:" + element) in userAdvancementFile["minecraft:adventure/adventuring_time"]["criteria"])){
                 // console.log(element + " not yet visited")
-                r_biomes.push(element);
+                r_biomes.push(capitalize(element));
             }
         });
     } else {
@@ -126,7 +134,7 @@ function checkAdvancements(){
         animals.forEach(element => {
             if(! (("minecraft:" + element) in userAdvancementFile["minecraft:husbandry/bred_all_animals"]["criteria"])){
                 // console.log(element + " not bred yet")
-                r_animals.push(element);
+                r_animals.push(capitalize(element));
             }
         });
     } else {
