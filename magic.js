@@ -147,20 +147,6 @@ function checkAdvancements(){
     }
 
     displayResults();
-
-    //yucky placeholder
-    // console.log("Nether biomes remaining:");
-    // console.log(r_nether);
-    console.log("Mobs remaining:");
-    console.log(r_mobs);
-    console.log("Foods remaining:");
-    console.log(r_foods);
-    console.log("Cats remaining:");
-    console.log(r_cats);
-    console.log("Biomes remaining:");
-    console.log(r_biomes);
-    console.log("Animals remaining:");
-    console.log(r_animals);
 }
 
 
