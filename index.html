@@ -5,38 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Advancement Tacker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color: #414141; color: white;">
-    <!-- All of this is a placeholder -->
-    <h1>Minecraft Advancement Tracker (WIP)</h1>
+<body>
+    <div id="main">
+        <h1 id="title" class="center-text">Minecraft Advancement Tracker (WIP)</h1>
+        <hr>
 
-    <h2>How to use:</h2>
-    <div class="instructions">
-        <p>1.- Open the file explorer and go to your .minecraft folder, this will depend on your OS</p>
-        <table>
-            <tr>
-                <th>Windows</th>
-                <th>Linux</th>
-            </tr>
-            <tr>
-                <td>C:\Users\yourUser\AppData\Roaming\.minecraft</td>
-                <td>/home/user/.minecraft</td>
-            </tr>
-        </table>
+        <p class="center-text">This tool shows your progress with those long advancements that you can easily lose track progress of.</p>
+        <p class="center-text">Upload your JSON advancements file below:</p>
 
-        <p>2.- Go to your <span>saves</span> folder, open your world folder, then into <span>advancements</span></p>
-        <p>3.- Copy the path to your <span>advancements</span> folder, then click below to upload a file</p>
-        <p>4.- Paste the path into your file explorer, then upload the json file (it will have a weird name like d761008a-1d69-4a77-838d-2bbdc4c099f7)</p>
-        <p>5.- Press check for advancements and open the console for the results (right click anywhere, then inspect, then console)</p>
+        <div id="inputSection">
+            <div id="fakeInput">
+                <label class="buttons" id="inputLabel" for="fileInput">Select file</label>
+            </div>
 
-    </div>
+            <input id="fileInput" type="file" name="" accept=".json">
 
-    <div>
-        <input type="file" name="" id="fileInput" accept=".json">
-        <br>
-        <input onclick="checkAdvancements()" type="button" value="Check for advancements" id="submit">
+            <input class="buttons" onclick="checkAdvancements()" type="button" value="Check for advancements" id="submit">
+        </div>
+
+        <div id="result">
+            
+        </div>
     </div>
 
     <script src="magic.js"></script>

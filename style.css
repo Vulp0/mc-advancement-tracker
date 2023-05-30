@@ -1,3 +1,17 @@
+:root {
+    --accent: #3065C9;
+    --dark-accent: #214589;
+    --text-color: #111111;
+    --alt-accent: #C99930;
+    --dark-alt-accent: #8A6921;
+}
+
+body {
+    color: var(--text-color);
+    font-family: 'Open Sans', sans-serif;
+    background-image:url("bg.webp");
+}
+
 table {
     border: black solid 3px;
 }
@@ -10,10 +24,60 @@ p, th, td {
     font-size: larger;
 }
 
-span {
-    color: yellow;
+p, h1, h2 {
+    margin: 0;
 }
 
-#results {
-    margin-top: 30px;
+#main {
+    max-width: 88%;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+#desc {
+    margin-bottom: 16px;
+}
+
+#fakeInput {
+    display: flex;
+}
+
+#inputLabel {
+    width: fit-content;
+}
+
+#fileInput {
+    display: none;
+}
+
+.buttons {
+    color: white;
+    background-color: var(--accent);
+    padding: 8px;
+    border: none;
+    margin: 0;
+    display: block;
+}
+
+.buttons:hover {
+    background-color: var(--dark-accent);
+    cursor: pointer;
+}
+
+.altButtonColor {
+    color:var(--text-color);
+    background-color: var(--alt-accent);
+}
+
+.altButtonColor:hover {
+    background-color: var(--dark-alt-accent);
+}
+
+#result {
+    font-size: 16px;
 }
