@@ -6,7 +6,15 @@
     --dark-alt-accent: #8A6921;
 }
 
+html {
+    height: 100%
+}
+
 body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--text-color);
     font-family: 'Open Sans', sans-serif;
     background-image:url("bg.webp");
