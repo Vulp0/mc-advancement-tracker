@@ -2,6 +2,7 @@ let reader = new FileReader();
 let cats, biomes, foods, mobs, animals, nether;
 let r_cats = [], r_biomes = [], r_foods = [], r_mobs = [], r_animals = [], r_nether = [];
 let userAdvancementFile;
+let toggle = true;
 
 let inputLabel = document.querySelector("#inputLabel");
 let fileInput = document.querySelector("#fileInput");
@@ -146,7 +147,11 @@ function checkAdvancements(){
         r_animals.push("Advancement completed");
     }
 
-    displayResults();
+    if(toggle){
+        displayResults();
+        toggle = false;
+    }
+    
 }
 
 
